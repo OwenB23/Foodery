@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Foodery</title>
+    <!--BOOTSTRAP CSS-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <!-- GoogleFont -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geologica:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--CUSTOM CSS-->
+    <link href="foodery.css" rel="stylesheet" />
+
+    <!--FONTAWESOME-->
+    <script
+      src="https://kit.fontawesome.com/c0319300c2.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg" aria-label="Third navbar example">
+      <div class="container-fluid">
+        <a class="foodery-logo" href="#">Foodery</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMobileDropDown"
+          aria-controls="navMobileDropDown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!--The navMobileDropDown is used to connect the data-bs-target to toggle the mobile menu-->
+        <div class="collapse navbar-collapse" id="navMobileDropDown">
+          <ul class="navbar-nav me-auto mb-2 mb-sm-0">
+            <li class="nav-item dropdown mx-3">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                >Food</a
+              >
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#search">All Food</a></li>
+                <li><a class="dropdown-item" href="#search">Recipes</a></li>
+                <li>
+                  <a class="dropdown-item" href="#newsletter">NewsLetter</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link" href="#search">Search</a>
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link" href="#featured">Featured</a>
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link" href="#newsletter">Newsletter</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!--HERO BANNER-->
+    <section>
+      <div class="container-fluid">
+        <!--MOBILE-->
+        <div class="row align-items-center">
+          <div class="col-12 col-lg-6 hero-text">
+            <h1
+              class="display-5 fw-bold mb-3"
+              style="color: #52c587; padding-top: 20px"
+            >
+              Simple Recipes to save you time and money
+            </h1>
+            <p class="mt-4 hero-text-p">
+              Satisfy your cravings with our wide selection of simple and fast
+              recipes.
+            </p>
+          </div>
+          <div class="col-12 col-lg-6">
+            <img
+              src="Images/salmon-bowl.jpg"
+              class="d-block mx-lg-auto img-fluid hero-image"
+              alt="Image of Salmon Bowl"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--FEATURED RECIPE-->
+    <div class="container-fluid section-bg" id="featured">
+      <div class="row featured-row">
+        <div class="col-md-8 col-11 mx-auto">
+          <h1 class="featured-header">Featured</h1>
+          <div class="card card-styles mb-5">
+            <div class="row g-0">
+              <div class="col-md-6">
+                <div class="card-img">
+                  <img src="Images/vegan-ramen.jpg" alt="Vegan Food" />
+                </div>
+              </div>
+              <div class="col-md-6 card-container">
+                <div class="card-body">
+                  <h3>Vegan Ramen</h3>
+                  <p>
+                    Vegan ramen starts with a savory and aromatic broth made
+                    from vegetable stock, miso paste, soy sauce, or other
+                    umami-rich ingredients. The broth is the heart of the dish.
+                    The noodles used in vegan ramen are typically made from
+                    wheat flour or rice. Toppings and garnishes can vary, but
+                    they often include a variety of vegetables, such as
+                    mushrooms, bok choy, bean sprouts, green onions, and corn
+                  </p>
+                  <br />
+                  <div
+                    class="icons-container"
+                    style="background-color: #52c587"
+                  >
+                    <!--FONT AWESOME ICONS https://fontawesome.com/icons-->
+
+                    <i
+                      onclick="incrementCounter()"
+                      class="fa-solid fa-heart"
+                      style="margin-right: 10px"
+                    ></i>
+                    <span id="counter" style="margin-right: 20px; color: #fff"
+                      >0</span
+                    >
+                    <i
+                      class="fa-solid fa-message"
+                      style="color: #fff; margin-right: 20px"
+                    ></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RECIPE GENERATOR -->
+    <section class="recipe-container" id="search">
+      <div class="recipe-box">
+        <h1>Search From Thousands of Recipes!</h1>
+        <p>Enter any ingredient to find recipes!</p>
+        <input type="text" id="search-input" placeholder="Ingredient..." />
+        <button id="searchBtn">Search!</button>
+      </div>
+    </section>
+    <section class="meal-results-section">
+      <div class="meal-result" id="mealResult">
+        <h2 class="title" id="searchResults">Search Results:</h2>
+        <div id="meal"></div>
+      </div>
+
+      <!-- Bootstrap Modal-->
+      <div
+        class="modal fade"
+        id="recipe-modal"
+        tabindex="-1"
+        role="dialog"
+      ></div>
+    </section>
+
+    <!-- NEWSLETTER SECTION -->
+    <section id="newsletter" class="news-letter-container">
+      <div class="news-letter-box">
+        <h1>Newsletter</h1>
+        <div class="newsletter-p">
+          <p>Sign up for our newsletter to get the latest recipe and offers!</p>
+        </div>
+        <form
+          name="form1"
+          style="width: 100%; display: flex; justify-content: center"
+        >
+          <input
+            id="email-input"
+            class="email-input"
+            required
+            type="email"
+            placeholder="Enter Your Email"
+          />
+          <input
+            id="submit-btn"
+            class="submit-email-btn"
+            onclick="validateEmail(document.form1.email)"
+            type="submit"
+            value="Submit"
+          />
+
+          <dialog id="d">
+            <div class="modal-content-news-letter">
+              <h1 method="dialog">Success!</h1>
+              <p>You have subscribed to the Foodery newsletter!</p>
+              <button onclick="d.close()">Close</button>
+            </div>
+          </dialog>
+        </form>
+      </div>
+    </section>
+
+    <!--FOOTER-->
+    <div class="container-fluid p-0">
+      <footer class="d-flex justify-content-center w-100 align-items-center">
+        <div class="row w-100 align-items-center">
+          <div class="col text-center" style="color: #fff; font-size: 17px">
+            &copy; Foodery 2025, All rights reserved.
+          </div>
+          <div class="col text-center">
+            <a class="foodery-logo" href="#">Foodery</a>
+          </div>
+          <div class="footer-links col text-center">
+            <div class="d-flex flex-column">
+              <a href="#">Home</a><a href="#featured">Featured</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!--JAVASCRIPT LINK-->
+    <script src="foodery.js" defer></script>
+  </body>
+</html>

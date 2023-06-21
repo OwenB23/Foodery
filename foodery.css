@@ -1,0 +1,712 @@
+/*GOOGLE FONT API*/
+@import url("https://fonts.googleapis.com/css2?family=Sarina&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+:root {
+  --main-color: #52c587;
+  --secondary-color: #daffd4;
+  --accent-color: rgba(218, 255, 212, 0.3);
+  --main-text-color: #3a3a3a;
+  --main-font: "Sarina", cursive;
+  --body-font: "Poppins", sans-serif;
+  --fa-border-color: rgba(255, 255, 255, 0);
+}
+
+/*BASIC STYLING*/
+
+body {
+  font-family: "Geologica", sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: "Geologica", sans-serif;
+  color: var(--main-text-color);
+}
+
+p {
+  font-family: "Geologica", sans-serif;
+  color: var(--main-text-color);
+  text-align: justify;
+}
+
+.section-bg {
+  background: linear-gradient(#daffd4 70%, white 30%);
+}
+
+/*NAVBAR*/
+
+.navbar {
+  background-color: white;
+  box-shadow: 0px 4px 34px 4px rgba(0, 0, 0, 0.25);
+  z-index: 9999;
+  font-family: "Geologica", sans-serif;
+  font-weight: bolder;
+  transition: 0.5s all ease;
+  position: sticky;
+  top: 0;
+  height: 100px;
+}
+
+.navbar ul li a {
+  color: black;
+}
+
+.navbar a:hover {
+  color: var(--main-color);
+  transition: 0.4s ease-in-out;
+}
+
+.foodery-logo {
+  font-family: "Geologica", sans-serif;
+  color: var(--main-color);
+  text-shadow: 4px 4px var(--secondary-color);
+  font-size: 40px;
+  text-decoration: none;
+  padding-left: 20%;
+  padding-right: 15%;
+}
+
+/*Overrides Bootstraps <a> tag hover effect*/
+.foodery-logo:hover {
+  color: #fff;
+}
+
+.dropdown-item {
+  color: #fff;
+}
+
+.dropdown-menu {
+  background-color: var(--main-color);
+}
+
+/*MOBILE NAVBAR*/
+
+.navbar-collapse {
+  background-color: white;
+  margin: 30px -10px;
+  padding: 10px;
+}
+
+.navbar-shrink {
+  height: 65px;
+
+  background-color: #daffd4;
+}
+
+/*HERO STYLING*/
+
+.hero-image {
+  margin-right: 0;
+}
+
+.hero-text {
+  font-size: 24px;
+  padding-right: 20px !important;
+  padding-left: 20px !important;
+  font-family: "Geologica", sans-serif;
+}
+
+.hero-text-p {
+  padding-left: 0;
+  padding-right: 0;
+  font-family: "Geologica", sans-serif;
+  font-size: 25px;
+}
+
+/*FEATURED RECIPE*/
+
+.featured-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Geologica", sans-serif;
+  color: var(--main-color);
+  font-size: 70px;
+  margin: 30px auto 30px;
+}
+
+.card-body {
+  padding-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.card-body h3 {
+  text-align: left;
+  font-weight: 600;
+  padding-top: 20px;
+  padding-left: 15px;
+  margin-bottom: 20px;
+}
+
+.card-body p {
+  text-align: left;
+  font-weight: 400;
+  padding-left: 15px;
+  margin-bottom: 10px;
+  font-family: "Geologica", sans-serif;
+  font-size: 18px;
+}
+
+.card-styles {
+  box-shadow: 0px 0px 19px -2px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+
+.featured-row {
+  background-color: #daffd4;
+  padding-bottom: 100px;
+}
+
+.row > * {
+  flex-shrink: 0;
+  max-width: 100%;
+  padding-right: 0;
+  padding-left: 0;
+  margin-top: var(--bs-gutter-y);
+}
+
+.card-img {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.card-img img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card-text {
+  text-align: justify;
+}
+
+.recipe-btn {
+  background-color: var(--main-color);
+  color: #fff;
+  margin-left: 15px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.recipe-btn:hover {
+  background-color: --main-color;
+  color: #333;
+  transition: 0.4s ease-in;
+}
+
+.card-container {
+  position: relative;
+  background-color: #fff;
+}
+
+.card-body .icons-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: flex-end;
+  padding: 8px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-radius: 0px 0px 5px 0px;
+}
+
+/*FONT AWESOME ICON STYLES*/
+.fa-heart {
+  color: rgb(255, 81, 104);
+}
+
+.fa-heart:hover {
+  cursor: pointer;
+}
+
+.fa-message {
+  color: rgb(44, 44, 44);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+#counter.clicked {
+  animation: pulse 1s;
+}
+
+/* Receipe Generator Section */
+
+.recipe-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(Images/Vegetble\ background.avif);
+  background-size: cover;
+  /* Adjust the image size to cover the container */
+  background-position: center;
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+.recipe-box {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: flex-start;
+  width: 65%;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.recipe-box h1 {
+  color: #fff;
+}
+
+.recipe-box p {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 23px;
+  font-family: "Geologica", sans-serif;
+  color: #fff;
+}
+
+#search-input {
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 90px;
+  border: 3px solid #52c587;
+  margin-bottom: 20px;
+  align-self: center;
+  width: 65%;
+  background-color: #fff;
+  font-size: 18px;
+}
+
+#searchBtn {
+  width: 30%;
+  margin: 0 auto;
+  border-radius: 90px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  background-color: #52c587;
+  color: #fff;
+  border: none;
+}
+
+#searchBtn:hover {
+  background-color: #75d19f;
+  color: #fff;
+  transition: 0.2s ease-in;
+}
+
+#searchResults {
+  display: none;
+  text-align: center;
+}
+
+#mealResult {
+  display: none;
+}
+
+.meal-result {
+  max-width: 100%;
+  overflow: hidden;
+  background-color: #daffd4;
+}
+
+.meal-result h2 {
+  color: #52c587;
+  font-size: 35px;
+  padding-top: 20px;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#meal {
+  padding-bottom: 30px;
+
+  margin-bottom: 20px;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  width: 100%;
+}
+
+.meal-item {
+  border-radius: 1rem;
+  box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.79);
+  margin: 20px;
+  flex: 1 0 200px;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  background-color: #fff;
+}
+
+.meal-img {
+  height: 200px;
+}
+
+.meal-img img {
+  width: 100%;
+  display: block;
+  height: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.meal-name {
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.meal-name h3 {
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.meal-name a {
+  margin-top: auto;
+  padding: 10px;
+}
+
+.recipeBtn {
+  text-decoration: none;
+  color: #fff;
+  background-color: #52c587;
+  font-weight: 500;
+  border-radius: 2rem;
+  font-size: 1.1rem;
+  padding: 0.75rem;
+  display: block;
+  width: 175px;
+  margin: auto;
+  border-radius: 2rem;
+
+  text-align: center;
+}
+
+.recipeBtn:hover {
+  background-color: #4cb87e;
+  color: #fff;
+}
+
+/* Modal */
+.modal-content {
+  background-color: #52c587;
+  margin-top: 90px;
+}
+
+.modal-header {
+  background-color: #daffd4;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.modal-title {
+  padding-right: 10px;
+}
+
+.close {
+  border: none;
+  font-size: 20px;
+  margin-bottom: 9px;
+  border-radius: 100px;
+  background-color: #52c587;
+  width: 35px;
+}
+
+.close:hover {
+  background-color: #4cb87e;
+}
+.modal-body {
+  background-color: #daffd4;
+  width: 100%;
+}
+
+.modal-body img {
+  object-fit: cover;
+  max-width: 100%;
+  max-height: 80%;
+  padding-bottom: 20px;
+}
+
+/* Js related */
+.showRecipe {
+  display: block;
+}
+
+.meal-details-content {
+  margin: 2rem;
+}
+.meal-details-content p {
+  padding: 1rem 0;
+}
+
+.recipe-close-btn {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  font-size: 1.8rem;
+  background: #fff;
+  border: none;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  opacity: 0.9;
+}
+
+/*  */
+.notFound p {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  color: #52c587;
+  font-family: "Geologica", sans-serif;
+}
+
+.recipeBtn:hover {
+  background-color: #4cb87e;
+}
+
+/* News Letter Section */
+
+.news-letter-container {
+  background-color: #fff;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.news-letter-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 60%;
+  width: 65%;
+  box-shadow: 2px 2px 7px -1px black;
+  border-radius: 5px;
+  background-color: #daffd4;
+}
+
+.news-letter-box h1 {
+  margin-top: 20px;
+  font-family: "Geologica", sans-serif;
+  color: var(--main-color);
+  font-size: 70px;
+}
+
+.news-letter-box p {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  color: black;
+  font-size: 20px;
+  text-align: center;
+}
+
+.newsletter-p {
+  max-width: 70%;
+}
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+}
+
+.email-input {
+  border-radius: 10px;
+  margin-right: 20px;
+  width: 45%;
+  border: 2px solid var(--main-color);
+  padding: 5px;
+}
+
+.email-input:focus {
+  border: 2px solid var(--main-color);
+  outline: none;
+}
+
+.submit-email-btn {
+  background-color: var(--main-color);
+  color: #fff;
+  padding: 8px 18px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.submit-email-btn:hover {
+  color: black;
+  transition: 0.7s ease-in-out;
+}
+
+#d {
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0px 4px 34px 4px rgba(0, 0, 0, 0.25);
+}
+
+.modal-content-news-letter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  padding: 10px;
+}
+
+.modal-content-news-letter h1 {
+  margin-bottom: 10px;
+  margin-top: 0px;
+}
+
+.modal-content-news-letter p {
+  margin-bottom: 30px;
+}
+
+.modal-content-news-letter button {
+  border-radius: 20px;
+  padding: 4px 15px;
+  background-color: var(--main-color);
+  color: #fff;
+  border: none;
+}
+
+.modal-content-news-letter button:hover {
+  color: black;
+  transition: 0.7s ease-in-out;
+}
+
+/*FOOTER*/
+
+footer {
+  background-color: var(--main-color);
+  height: 150px;
+}
+
+footer > div > div > .foodery-logo {
+  color: var(--secondary-color);
+  text-shadow: 4px 4px rgb(44, 44, 44);
+  padding: 0;
+}
+
+/*Overrides Bootstraps <a> tag hover effect*/
+footer > .foodery-logo:hover {
+  color: var(--secondary-color);
+}
+
+.footer-links a {
+  text-decoration: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: #fff;
+  font-size: 17px;
+}
+.footer-links a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  color: black;
+  transition: 0.3s ease-in-out;
+}
+
+/* Media Queries */
+@media (max-width: 658px) {
+  .news-letter-box h1 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero-text {
+    font-size: 15px;
+    text-align: left;
+    padding: 30px 20px 20px 20px;
+  }
+
+  .hero-text h1 {
+    font-size: 27px;
+  }
+
+  .hero-image {
+    margin-left: -11px;
+    margin-right: -11px;
+  }
+
+  .featured-header {
+    font-size: 40px;
+  }
+
+  /* Icons Container */
+  .card-body .icons-container {
+    border-radius: 0px 0px 5px 5px;
+  }
+
+  .d-block {
+    margin-left: 0px;
+  }
+
+  /* Search btn for recipes */
+  .recipe-box {
+    height: 100%;
+    width: 100%; /* Change to max-width */
+  }
+  /*  */
+  #meal {
+    margin-left: 26px;
+  }
+
+  .modal-body img {
+    max-width: 100%;
+  }
+  /* newsletter */
+  .news-letter-box {
+    width: 95%;
+  }
+
+  .news-letter-box h1 {
+    font-size: 40px;
+  }
+
+  .newsletter-p {
+    width: 90%;
+  }
+}
